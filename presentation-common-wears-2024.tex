@@ -196,9 +196,24 @@
 	\begin{alertblock}{Why?}
 		Many-agent reinforcement learning is a \bold{complex} task, we need a \bold{tool} to simplify the development of RL algorithms.
 	\end{alertblock}
-	\begin{exampleblock}{Common-wears POV}
-		simplify and homogenize the development of RL algorithms in common-wears scenarios.
+	\begin{exampleblock}{State-of-the-art solutions}
+		\begin{itemize}
+			\item \emph{Ray}: a distributed execution framework for reinforcement learning
+			\begin{itemize}
+				\item Do not scale with the number of agents
+			\end{itemize} 
+			\item \emph{PettingZoo}: a Python library for multi-agent reinforcement learning simulations
+			\begin{itemize}
+				\item Do not consider very large number of agents and \emph{spatial} scenarios
+			\end{itemize}
+		\end{itemize}
 	\end{exampleblock}
+	\begin{exampleblock}{Common-wears POV}
+		simplify and homogenize the development of RL algorithms in common-wears scenarios \faArrowRight \, \bold{ScaRLib}
+	\end{exampleblock}
+\end{frame}
+\begin{frame}{ScaRLib}
+	
 \end{frame}
 \section{Libraries/API}
 \begin{frame}{Reactive extension for Aggregate Computing: FRASP}
@@ -208,7 +223,6 @@
 	\begin{exampleblock}{Common-wears POV}
 		We want a pragmatic way to express spatio-temporal behavior evolution without sacrificing resource efficiency (e.g., battery, bandwidth, etc.).
 	\end{exampleblock}
-
 \end{frame}
 \begin{frame}{API for Swarm behaviours: MacroSwarm}
 
