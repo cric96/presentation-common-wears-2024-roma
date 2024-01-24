@@ -134,7 +134,7 @@
 \begin{frame}[fragile]{Activities Overview}
 	\begin{figure}
 		\centering
-		\includegraphics[width=0.75\textwidth]{img/activities-overview.drawio}
+		\includegraphics[width=0.55\textwidth]{img/activities-overview.drawio}
 	\end{figure}
 \end{frame}
 \section{Learning}
@@ -148,7 +148,7 @@
 	\end{exampleblock}
 	\begin{exampleblock}{State-of-the-art solutions}
 		\begin{itemize}
-			\item Centralised training and decentralised execution: standard training paradigm
+			\item Centralised training and decentralized execution: standard training paradigm
 			\item Mean-field approximation: agents are independent and identical \faArrowRight \, mean-field reinforcement learning
 			\item Our approach: \emph{Field-informed RL}
 		\end{itemize}
@@ -204,16 +204,28 @@
 			\end{itemize} 
 			\item \emph{PettingZoo}: a Python library for multi-agent reinforcement learning simulations
 			\begin{itemize}
-				\item Do not consider very large number of agents and \emph{spatial} scenarios
+				\item Do not consider a very large number of agents and \emph{spatial} scenarios
 			\end{itemize}
 		\end{itemize}
 	\end{exampleblock}
 	\begin{exampleblock}{Common-wears POV}
-		simplify and homogenize the development of RL algorithms in common-wears scenarios \faArrowRight \, \bold{ScaRLib}
+		Simplify and homogenize the development of RL algorithms in common-wears scenarios \faArrowRight \, \bold{ScaRLib}
 	\end{exampleblock}
 \end{frame}
 \begin{frame}{ScaRLib}
-	
+ A scala framework designed to support the development of many-agent reinforcement learning systems in JVM-based environments
+\vspace{0.5cm}
+
+ \hsplit{\includegraphics[width=\textwidth]{img/dsl-example}}{
+	\begin{itemize}
+		\item Environment-agnostic and Neural Network-agnostic API
+		\item Flexible and extensible architecture for supporting different RL algorithms/training
+		mode
+		\item Type-safe DSL for RL algorithms configuration
+		\item Special issues extension: improved documentation and example
+		\item Feel free to contribute! :)
+	\end{itemize}
+ }
 \end{frame}
 \section{Libraries/API}
 \begin{frame}{Reactive extension for Aggregate Computing: FRASP}
@@ -223,17 +235,66 @@
 	\begin{exampleblock}{Common-wears POV}
 		We want a pragmatic way to express spatio-temporal behavior evolution without sacrificing resource efficiency (e.g., battery, bandwidth, etc.).
 	\end{exampleblock}
+	\begin{exampleblock}{FRASP}
+		Functional Reactive Approach to Self-organisation Programming
+		\begin{itemize}
+			\item designed by interpreting the aggregate programming model by a (distributed) functional
+			reactive programming (FRP) perspective
+			\item implemented as a Scala DSL using Sodium FRP library
+		\end{itemize}
+	\end{exampleblock}
+\end{frame}
+\begin{frame}{FRASP: Idea}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.4\textwidth]{img/idea}
+\end{figure}
+\end{frame}
+\begin{frame}{FRASP: Idea}
+	\includegraphics[width=0.24\textwidth]{img/start.png}
+	\includegraphics[width=0.24\textwidth]{img/middle.png}
+	\includegraphics[width=0.24\textwidth]{img/middle-2.png}
+	\includegraphics[width=0.24\textwidth]{img/end.png}
+\end{frame}
+\begin{frame}{FRASP: works in progress}
+	\begin{exampleblock}
+		
+	\begin{itemize}
+		\item Linear temporal logic for evaluation of spatiotemporal properties
+		\item Support the standard library of ScaFi
+		\item Kotlin implementation
+		\item Middleware for executing FRASP on devices
+	\end{itemize}
+	\end{exampleblock}
 \end{frame}
 \begin{frame}{API for Swarm behaviours: MacroSwarm}
 
 \end{frame}
-\begin{frame}{Simplify the development of aggregate script: Visual ScaFi}
-
+\begin{frame}{Simplify the development of aggregate script: \bold{Visual ScaFi}}
+	\begin{alertblock}{Visual programming}
+		A programming paradigm that allows to create programs by manipulating elements graphically rather than by specifying them textually.		
+	\end{alertblock}
+	\begin{exampleblock}{Common-wears POV}
+		We want a pragmatic way to express collective scripts without sacrificing \emph{readability} and \emph{usability}.
+	\end{exampleblock}
+	\begin{exampleblock}{Visual ScaFi}
+		\begin{itemize}
+			\item A visual programming language for aggregate computing
+			\item It is based on blockly (a visual programming language developed by Google)
+			\item It translates visual scripts into aggregate computing scripts (ScaFi)		
+		\end{itemize}
+	\end{exampleblock}
 \end{frame}
-\section{Exploratory}
+\begin{frame}{Visual ScaFi WIP}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.8\textwidth]{img/example}
+\end{figure}
+\end{frame}
+\section{Preliminary works in progress}
 \begin{frame}{RuFi: Rust Field}
-\begin{alertblock}{Idea}
-	\bold{Common-wears POV}: \begin{itemize}
+\begin{alertblock}{Common-wears POV}
+	\begin{itemize}
 		\item the community can be composed of low-power devices \faArrowRight \, we need a \bold{lightweight} solution.
 		\item interoperability is a key aspect \faArrowRight \, we need a \bold{standard} solution.
 	\end{itemize}
